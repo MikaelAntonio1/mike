@@ -1,0 +1,128 @@
+#fundo3d {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 0;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hability {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hability h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.grid-habilidades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.cards {
+    background-color: rgba(18, 2, 2, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.267);
+    border-radius: 12px;
+    padding: 1.8rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-infos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.card-infos p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.icons-category {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 8px;
+    object-fit: contain;
+}
+
+.languages-flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
+.card-language {
+    width: 100%;
+    height: 110px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.192);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.card-language p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #cccccc;
+}
+
+.icons-lang {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.card-language:hover {
+    background-color: rgba(255, 0, 0, 0.06);
+    border-color: rgba(255, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .grid-habilidades {
+        grid-template-columns: 1fr;
+    }
+    .hability h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .languages-flex {
+        grid-template-columns: 1fr; 
+    }
+    .card-language {
+        flex-direction: row;
+        height: 60px;
+        justify-content: flex-start;
+        padding-left: 20px;
+        gap: 1rem;
+    }
+}
